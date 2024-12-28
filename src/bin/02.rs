@@ -12,6 +12,9 @@ fn main() {
 
     let p1 = solve_p1(&program);
     println!("Part One: {p1}");
+
+    let p2 = solve_p2(&program);
+    println!("Part Two: {p2}");
 }
 
 fn solve_p1(program: &[i64]) -> i64 {
@@ -19,6 +22,21 @@ fn solve_p1(program: &[i64]) -> i64 {
     state[1] = 12;
     state[2] = 2;
     run(&mut state)[0]
+}
+
+fn solve_p2(program: &[i64]) -> i64 {
+    for noun in 0..100 {
+        for verb in 0.100 {
+            let mut state = program.to_owned();
+            state[1] = noun;
+            state[2] = verb;
+            let output = run(&mut state)[0];
+            if output == 19690720 {
+                return 100 * noun + verb;
+            }
+        }
+    }
+    unreachable!();
 }
 
 fn run(state: &mut [i64]) -> &[i64] {
