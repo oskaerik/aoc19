@@ -26,7 +26,7 @@ fn solve_p1(program: &[i64]) -> i64 {
 
 fn solve_p2(program: &[i64]) -> i64 {
     for noun in 0..100 {
-        for verb in 0.100 {
+        for verb in 0..100 {
             let mut state = program.to_owned();
             state[1] = noun;
             state[2] = verb;
