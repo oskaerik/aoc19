@@ -3,11 +3,3 @@ name = "aoc19"
 version = "0.1.0"
 edition = "2021"
 authors = ["Oskar Eriksson"]
-
-[workspace.metadata.clippy]
-warn = [
-    "clippy::all",
-    "clippy::cargo",
-    "clippy::pedantic",
-    "clippy::nursery"
-]
