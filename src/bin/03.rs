@@ -36,9 +36,12 @@ fn steps(first: &str, second: &str) -> i64 {
         .map(|&t| {
             path1.iter().position(|&x| x == t).unwrap()
                 + path2.iter().position(|&x| x == t).unwrap()
+                + 2
         })
         .min()
-        .unwrap().try_into().unwrap()
+        .unwrap()
+        .try_into()
+        .unwrap()
 }
 
 fn path(traces: &str) -> Vec<(i64, i64)> {
