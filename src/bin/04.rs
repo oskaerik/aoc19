@@ -63,8 +63,9 @@ fn part2(x: i64) -> bool {
         d = d_;
         n /= 10;
     }
-            if c == 2 {
-                dub = true;}
+    if c == 2 {
+        dub = true;
+    }
     inc && dub
 }
 
@@ -90,7 +91,7 @@ mod tests {
         assert!(!part2(123));
         assert!(!part2(2111223));
         assert!(!part2(211122));
-        assert!(!part2(0));
-        assert!(part2(00));
+        assert!(!part2(1));
+        assert!(part2(11));
     }
 }
